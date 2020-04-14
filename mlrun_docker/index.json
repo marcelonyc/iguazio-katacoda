@@ -1,0 +1,57 @@
+{
+    "backend": {
+        "imageid": "docker"
+    },
+    "description": "Intro to MLRun for Experiment tracking. MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
+    "details": {
+        "assets": {
+            "host01": [
+                {
+                    "file": "01-notebook.ipynb",
+                    "target": "~/"
+                },
+                {
+                    "file": "functions.py",
+                    "target": "~/"
+                },
+                {
+                    "file": "01-runlocal.ipynb",
+                    "target": "~/"
+                }
+            ]
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "intro": {
+            "courseData": "courseSetup.sh",
+            "credits": "",
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "text": "step1.md",
+                "title": "Deploy Jupyter and MLRUN"
+            },
+            {
+                "text": "step2.md",
+                "title": "Run your first Notebook"
+            },
+            {
+                "text": "step3.md",
+                "title": "Review execution results"
+            }
+        ]
+    },
+    "difficulty": "beginner",
+    "environment": {
+        "showdashboard": true,
+        "dashboards": [ {"name": "Jupyter Notebooks", "port": 30040},
+		 {"name": "MLRun UI", "port": 30068}
+	],
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    },
+    "time": "30 minutes",
+    "title": "AI/ML Experiment tracking"
+}
