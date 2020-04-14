@@ -2,7 +2,7 @@
     "backend": {
         "imageid": "kubernetes"
     },
-    "description": "Intro to MLRun for Experiment tracking. MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
+    "description": "MLRun for Experiment tracking (Intermediate). MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
     "details": {
         "assets": {
             "host01": [
