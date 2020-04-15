@@ -8,7 +8,8 @@ You should be able to connect in a few minutes to:
 * Scroll down and wait until the execution is completed
 
 ## MLRun UI
-Once complete, you can track the experiment in the <a href="https://[[HOST_SUBDOMAIN]]-30068-[[KATACODA_HOST]].environments.katacoda.com/">MLRun UI tab</a>
+Once complete, you can track the experiment in the 
+<a href="https://[[HOST_SUBDOMAIN]]-30068-[[KATACODA_HOST]].environments.katacoda.com/">MLRun UI tab</a>
 
 
 
