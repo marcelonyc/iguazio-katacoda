@@ -11,7 +11,7 @@ mkdir /tmp/mlrun/data
 
 sleep 2
 
-export MLRUN_IP=host.docker.internal
+export MLRUN_IP=localhost
 export SHARED_DIR="/tmp/mlrun"
 # On Windows, use host.docker.internal for MLRUN_IP
 
