@@ -31,10 +31,6 @@
                     "target": "~/"
                 },
                 {
-                    "file": "01-runlocal.ipynb",
-                    "target": "~/"
-                },
-                {
                     "file": "add_reg.py",
                     "target": "~/",
 		    "chmod": "+x"
@@ -95,7 +91,7 @@
 		 {"name": "MLRun UI", "port": 30068}
 	],
         "uilayout": "terminal-iframe",
-        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+        "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com`\u001b[m\r\n"
     },
     "time": "30 minutes",
     "title": "AI/ML Experiment tracking"
