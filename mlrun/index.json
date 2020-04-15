@@ -7,10 +7,6 @@
         "assets": {
             "host01": [
                 {
-                    "file": "Dockerfile.jupy",
-                    "target": "~/"
-                },
-                {
                     "file": "mljupy.yaml",
                     "target": "~/"
                 },
