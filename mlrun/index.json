@@ -62,7 +62,7 @@
         },
         "intro": {
             "courseData": "courseSetup.sh",
-            "credits": "Marcelo Litovsky. Iguazio https://www.iguazio.com",
+            "credits": "Marcelo Litovsky. <a href='https://www.iguazio.com'>Iguazio</a>",
             "text": "intro.md"
         },
         "steps": [
