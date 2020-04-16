@@ -2,7 +2,7 @@
     "backend": {
         "imageid": "kubernetes"
     },
-    "description": "MLRun for Experiment tracking (Intermediate). MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
+    "description": "MLRun for Experiment tracking. MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
     "details": {
         "assets": {
             "host01": [
@@ -71,7 +71,11 @@
                 "title": "Deploy Jupyter and MLRUN"
             },
             {
-                "text": "step2.md",
+                "text": "step-01-a.md",
+                "title": "Run your first Notebook"
+            },
+            {
+                "text": "step-01-b.md",
                 "title": "Run your first Notebook"
             },
             {
@@ -87,7 +91,7 @@
 		 {"name": "MLRun UI", "port": 30068}
 	],
         "uilayout": "terminal-iframe",
-        "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com`\u001b[m\r\n"
+        "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\u001b[m\r\n"
     },
     "time": "30 minutes",
     "title": "AI/ML Experiment tracking"
