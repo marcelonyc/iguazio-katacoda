@@ -42,6 +42,11 @@
 		    "chmod": "+x"
                 },
                 {
+                    "file": "setup_pv.sh",
+                    "target": "~/",
+		    "chmod": "+x"
+                },
+                {
                     "file": "setup_jupyter.sh",
                     "target": "~/",
 		    "chmod": "+x"

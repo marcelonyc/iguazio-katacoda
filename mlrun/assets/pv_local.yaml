@@ -10,17 +10,15 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /tmp/mlrun
+    path: {{FS_ROOT}}
   nodeAffinity:
     required:
       nodeSelectorTerms:
       - matchExpressions:
         - key: kubernetes.io/hostname
-          operator: In
+          operator: NotIn
           values:
-          - master
-          - host01
-          - host02
+          - dea657fa-80ac-11ea-91e1-00155d9677d9
 
 ---
 
