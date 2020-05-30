@@ -9,7 +9,7 @@
                 {
                     "file": "spark-pi.yaml",
                     "target": "~/"
-                },
+                }
             ]
         },
         "finish": {
