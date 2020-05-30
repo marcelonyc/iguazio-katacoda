@@ -1,0 +1,42 @@
+{
+    "backend": {
+        "imageid": "kubernetes-cluster-running:1.18"
+    },
+    "description": "Spark On Kubernetes demo",
+    "details": {
+        "assets": {
+            "host01": [
+                {
+                    "file": "spark-pi.yaml",
+                    "target": "~/"
+                },
+            ]
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "intro": {
+            "credits": "Marcelo Litovsky. <a href='https://www.iguazio.com'>Iguazio</a>",
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "text": "step1.md",
+                "title": "Install and run application"
+            },
+            {
+                "text": "step2.md",
+                "title": "Monitor the application"
+            },
+        ]
+    },
+    "difficulty": "beginner",
+    "environment": {
+        "showdashboard": true
+	],
+        "uilayout": "terminal-iframe",
+        "uimessage1": "Sparkk8s demo by Iguazio. https://www.iguazio.com"
+    },
+    "time": "30 minutes",
+    "title": "Spark K8S demo"
+}
