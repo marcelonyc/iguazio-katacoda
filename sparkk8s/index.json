@@ -32,8 +32,7 @@
     },
     "difficulty": "beginner",
     "environment": {
-        "showdashboard": true
-	],
+        "showdashboard": true,
         "uilayout": "terminal-iframe",
         "uimessage1": "Sparkk8s demo by Iguazio. https://www.iguazio.com"
     },
