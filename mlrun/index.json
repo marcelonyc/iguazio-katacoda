@@ -58,7 +58,7 @@
 		 {"name": "MLRun UI", "port": 8081}
 	],
         "uilayout": "terminal-iframe",
-        "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\u001b[m\r\n"
+        "uimessage1": "AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\r\n"
     },
     "time": "30 minutes",
     "title": "AI/ML Experiment tracking"
