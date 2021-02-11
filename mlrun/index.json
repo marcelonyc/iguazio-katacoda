@@ -12,7 +12,7 @@
                 },
                 {
                     "file": "nuclio_example.py",
-                    "target": "~/",
+                    "target": "~/"
                 },
                 {
                     "file": "print_some.py",
