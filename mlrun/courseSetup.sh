@@ -1,8 +1,8 @@
-echo
-echo 
-echo "+++++++++++++++++++++++++++++++++"
-echo "  WAITING FOR SERVICES TO START "
-echo "+++++++++++++++++++++++++++++++++"
+echo >>  deployment.log   2>&1
+echo >>  deployment.log   2>&1
+echo "+++++++++++++++++++++++++++++++++" >>  deployment.log   2>&1
+echo "  WAITING FOR SERVICES TO START ">>  deployment.log   2>&1
+echo "+++++++++++++++++++++++++++++++++">>  deployment.log   2>&1
 
 docker network create mlrun-network
 docker run -it -p 8080:8080 --rm -d --network mlrun-network --name mlrun-api mlrun/mlrun-api:0.6.0
