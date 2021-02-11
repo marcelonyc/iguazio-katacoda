@@ -7,7 +7,7 @@
         "assets": {
             "host01": [
                 {
-                    "file": env.py,
+                    "file": "env.py",
                     "target": "~/"
                 },
                 {
