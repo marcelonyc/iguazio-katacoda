@@ -1,7 +1,6 @@
 You should be able to connect in a few minutes to: 
 
-## Open your first Notebook
-* Go to the <a href="https://[[HOST_SUBDOMAIN]]-30040-[[KATACODA_HOST]].environments.katacoda.com/lab/tree/mlrun/mlrun_course/01-the-basics.ipynb#sec1">Jupyter Notebooks tab</a>
+## Review and deploy your first function 
 
 ### Lets review some of the code
 * We first import the required mlrun modules

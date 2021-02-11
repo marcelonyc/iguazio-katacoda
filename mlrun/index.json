@@ -1,6 +1,6 @@
 {
     "backend": {
-        "imageid": "kubernetes"
+        "imageid": "ubuntu:2004"
     },
     "description": "MLRun for Experiment tracking. MLRun is a generic and convenient mechanism for data scientists and software developers to describe and run tasks related to machine learning.",
     "details": {
@@ -11,52 +11,7 @@
                     "target": "~/"
                 },
                 {
-                    "file": "mlrun-local.yaml",
-                    "target": "~/"
-                },
-                {
-                    "file": "pv_local.yaml",
-                    "target": "~/"
-                },
-                {
-                    "file": "01-the-basics.ipynb",
-                    "target": "~/"
-                },
-                {
-                    "file": "functions.py",
-                    "target": "~/"
-                },
-                {
                     "file": "add_reg.py",
-                    "target": "~/",
-		    "chmod": "+x"
-                },
-                {
-                    "file": "setup_registry.sh",
-                    "target": "~/",
-		    "chmod": "+x"
-                },
-                {
-                    "file": "start_mlrun.sh",
-                    "target": "~/",
-		    "chmod": "+x"
-                },
-                {
-                    "file": "setup_pv.sh",
-                    "target": "~/",
-		    "chmod": "+x"
-                },
-                {
-                    "file": "setup_jupyter.sh",
-                    "target": "~/",
-		    "chmod": "+x"
-		},
-                {
-                    "file": "mlrunui.yaml",
-                    "target": "~/"
-		},
-                {
-                    "file": "setup_mlrunui.sh",
                     "target": "~/",
 		    "chmod": "+x"
                 }
@@ -82,18 +37,14 @@
             {
                 "text": "step-01-b.md",
                 "title": "Run your first Notebook"
-            },
-            {
-                "text": "step3.md",
-                "title": "Review execution results"
             }
         ]
     },
     "difficulty": "beginner",
     "environment": {
         "showdashboard": true,
-        "dashboards": [ {"name": "Jupyter Notebooks", "port": 30040},
-		 {"name": "MLRun UI", "port": 30068}
+        "dashboards": [ {"name": "Nuclio Dashboard", "port": 8070},
+		 {"name": "MLRun UI", "port": 30050}
 	],
         "uilayout": "terminal-iframe",
         "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\u001b[m\r\n"

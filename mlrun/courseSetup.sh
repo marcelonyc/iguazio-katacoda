@@ -1,69 +1,17 @@
-#! /bin/bash 
-
-if [ "${FS_ROOT}x" = "x" ]
-then
-	export FS_ROOT="/tmp/mlrun"
-fi
-sleep 1
-echo ${FS_ROOT} >> deployment.log
-
-# Wait for Kubernetes to come up
-kubectl get pods > /dev/null
-while [ $? -ne 0 ]
-do
-        sleep 10
-	kubectl get pods > /dev/null
-done
-
-echo "Create PVC and PV"
-./setup_pv.sh ${FS_ROOT} >> deployment.log   2>&1
-
-echo "Create Nginix"
-kubectl run nginx --image=nginx --replicas=1 >> deployment.log 2>&1
-
-
-mkdir -p ${FS_ROOT}/mlrun_course
-mkdir ${FS_ROOT}/data
-
-sleep 2
-
-./setup_registry.sh >> deployment.log   2>&1
-
-
-echo "Deploy Jupyter"
-./setup_jupyter.sh   >> deployment.log   2>&1
-
-
-echo "Deploy MLRun API"
-./setup_mlrunui.sh >> deployment.log   2>&1
-
 echo
 echo 
 echo "+++++++++++++++++++++++++++++++++"
 echo "  WAITING FOR SERVICES TO START "
 echo "+++++++++++++++++++++++++++++++++"
 
-kubectl get pods|grep jupy|grep Runn > /dev/null
-while [ $? -ne 0 ]
-do
-     sleep 10
-     kubectl get pods|grep jupy|grep Runn > /dev/null
-done
-
-clear
-echo
-echo
-echo
-echo
-
-cp *.ipynb ${FS_ROOT}/mlrun_course/.
-cp *.py ${FS_ROOT}/mlrun_course/.
-cp start_mlrun.sh ${FS_ROOT}/mlrun_course/.
-sleep 1
-chown -R 1000 ${FS_ROOT}
-
-kubectl exec  `kubectl get pods |grep jupyter |awk '{print $1}'` /home/jovyan/mlrun/mlrun_course/start_mlrun.sh
-
+docker network create mlrun-network
+docker run -it -p 8080:8080 --rm -d --network mlrun-network --name mlrun-api mlrun/mlrun-api:0.6.0
+docker run -it -p 30050:80 --rm -d --network mlrun-network --name mlrun-ui -e MLRUN_API_PROXY_URL=http://mlrun-api:8080 mlrun/mlrun-ui:0.6.0
+docker run -p 8070:8070 -d --rm  --network mlrun-network -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp --name nuclio-dashboard quay.io/nuclio/dashboard:stable-amd64
+update-alternatives --install /usr/local/bin/python python /usr/bin/python3.8 0
+update-alternatives --install /usr/local/bin/pip pip /usr/local/bin/pip3 0
+pip install mlrun==0.6.0
+export MLRUN_DBPATH='http://localhost:8080'
 echo "+++++++++++++++++++++" >>  deployment.log   2>&1
 echo "DEPLOYMENT COMPLETED"  >>  deployment.log   2>&1
 echo "+++++++++++++++++++++" >>  deployment.log   2>&1
