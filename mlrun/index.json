@@ -7,13 +7,24 @@
         "assets": {
             "host01": [
                 {
-                    "file": "mljupy.yaml",
+                    "file": env.py",
                     "target": "~/"
                 },
                 {
-                    "file": "add_reg.py",
+                    "file": "nuclio_example.py",
                     "target": "~/",
-		    "chmod": "+x"
+                },
+                {
+                    "file": print_some.py",
+                    "target": "~/"
+                },
+                {
+                    "file": test_job.py",
+                    "target": "~/"
+                },
+                {
+                    "file": test_nuclio.py",
+                    "target": "~/"
                 }
             ]
         },
@@ -44,7 +55,7 @@
     "environment": {
         "showdashboard": true,
         "dashboards": [ {"name": "Nuclio Dashboard", "port": 8070},
-		 {"name": "MLRun UI", "port": 30050}
+		 {"name": "MLRun UI", "port": 8081}
 	],
         "uilayout": "terminal-iframe",
         "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\u001b[m\r\n"
