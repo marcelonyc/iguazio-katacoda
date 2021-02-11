@@ -1,5 +1,5 @@
 ## Running your code
-* Click here <a href="https://[[HOST_SUBDOMAIN]]-30050-[[KATACODA_HOST]].environments.katacoda.com">MLRun UI</a>
+* Click here <a href="https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com">MLRun UI</a>
 
 ## Lets review additional code
 
