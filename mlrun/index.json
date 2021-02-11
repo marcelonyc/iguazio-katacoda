@@ -7,7 +7,7 @@
         "assets": {
             "host01": [
                 {
-                    "file": env.py",
+                    "file": env.py,
                     "target": "~/"
                 },
                 {
@@ -15,15 +15,15 @@
                     "target": "~/",
                 },
                 {
-                    "file": print_some.py",
+                    "file": "print_some.py",
                     "target": "~/"
                 },
                 {
-                    "file": test_job.py",
+                    "file": "test_job.py",
                     "target": "~/"
                 },
                 {
-                    "file": test_nuclio.py",
+                    "file": "test_nuclio.py",
                     "target": "~/"
                 }
             ]
@@ -58,7 +58,7 @@
 		 {"name": "MLRun UI", "port": 8081}
 	],
         "uilayout": "terminal-iframe",
-        "uimessage1": "AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\r\n"
+        "uimessage1": "\u001b[32m AI/ML Experiment tracking.\r\nhttp://www.iguazio.com\u001b[m\r\n"
     },
     "time": "30 minutes",
     "title": "AI/ML Experiment tracking"
